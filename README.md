@@ -13,7 +13,7 @@ This project demonstrates a **Python-based template engine** inspired by `STJS` 
 
 - **Loops** using `#each`.
 
-- **Conditionals** using `#if/else`.
+- **Conditionals** using `#if/#else`.
   
 - **Dynamic placeholders** within templates using `{{ }}` expressions.
  
@@ -192,16 +192,16 @@ template_simple = {
             “category”: {
                 “#if”: {
                     “condition”: “{{role == ‘Manager’}}”,
-                    “then”: “Category: Management”,
-                    “else”: {
+                    “#then”: “Category: Management”,
+                    “#else”: {
                         “#if”: {
                             “condition”: “{{role == ‘Engineer’}}”,
-                            “then”: “Category: Technical”,
-                            “else”: {
+                            “#then”: “Category: Technical”,
+                            “#else”: {
                                 “#if”: {
                                     “condition”: “{{role == ‘Designer’}}”,
-                                    “then”: “Category: Creative”,
-                                    “else”: “Category: General”
+                                    “#then”: “Category: Creative”,
+                                    “#else”: “Category: General”
                                 }
                             }
                         }
