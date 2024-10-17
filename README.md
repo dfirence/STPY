@@ -3,7 +3,7 @@
 This Python-based template engine allows for powerful data transformations using familiar syntax like `if/else` logic and loops. It is ideal for rendering JSON-like data structures and can easily be extended for more advanced use cases.
 
 ## Warning: `eval(..)` usage
-To use Python expressions in the Config declarations of temp,ages, the `eval(…)` expression is implemented without keyword restrictions. You can easily add a restricted expression in the `resolve_template()` function.
+To use Python expressions in the Config declarations of templates, the `eval(…)` expression is implemented without keyword restrictions. You can easily add a restricted expression in the `resolve_template()` function.
 
 <br/><br/><hr/>
 
