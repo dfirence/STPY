@@ -45,8 +45,8 @@ template_yoda = {
             “status”: {
                 “#if”: {
                     “condition”: “{{legendary}}”,
-                    “then”: “Legendary”,
-                    “else”: “Not Legendary”
+                    “#then”: “Legendary”,
+                    “#else”: “Not Legendary”
                 }
             }
         }
@@ -86,8 +86,8 @@ template_yoda = {
             “status”: {
                 “#if”: {
                     “condition”: “{{legendary}}”,
-                    “then”: “Legendary”,
-                    “else”: “Not Legendary”
+                    “#then”: “Legendary”,
+                    “#else”: “Not Legendary”
                 }
             }
         }

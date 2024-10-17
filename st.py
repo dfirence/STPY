@@ -64,7 +64,7 @@ def handle_each(path, template, context):
     return [transform(template, item) for item in items]
 
 def handle_if(condition, then_template, else_template, context):
-    """Evaluate a condition and apply either the 'then' or 'else' template."""
+    """Evaluate a condition and apply either the '#then' or '#else' template."""
     condition_value = resolve_template(condition, context)
     if condition_value.lower() in ["true", "1"]:
         return transform(then_template, context)
@@ -73,21 +73,20 @@ def handle_if(condition, then_template, else_template, context):
 
 def transform(template, context):
     """
-    Apply a template to the given context, handling #each and #if directives.
+    Apply a template to the given context, handling #each, #if, #then, #else directives.
     """
     result = {}
 
-    # Ensure the template is a dictionary to avoid .items() errors
     if not isinstance(template, dict):
-        return template  # Return the template directly if it's a string or list
+        return template
 
     for key, value in template.items():
         if key == "#each":
             return handle_each(value, template.get("template", {}), context)
         elif key == "#if":
             condition = value.get("condition")
-            then_template = value.get("then", {})
-            else_template = value.get("else", {})
+            then_template = value.get("#then", {})
+            else_template = value.get("#else", {})
             return handle_if(condition, then_template, else_template, context)
         elif isinstance(value, str) and "{{" in value:
             result[key] = resolve_template(value, context)

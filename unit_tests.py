@@ -46,8 +46,8 @@ class TestTemplateEngine(unittest.TestCase):
             "status": {
                 "#if": {
                     "condition": "{{active}}",
-                    "then": "Active",
-                    "else": "Inactive"
+                    "#then": "Active",
+                    "#else": "Inactive"
                 }
             }
         }
@@ -61,8 +61,8 @@ class TestTemplateEngine(unittest.TestCase):
             "status": {
                 "#if": {
                     "condition": "{{active}}",
-                    "then": "Active",
-                    "else": "Inactive"
+                    "#then": "Active",
+                    "#else": "Inactive"
                 }
             }
         }
