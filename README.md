@@ -5,7 +5,7 @@ This Python-based template engine allows for powerful data transformations using
 ## Warning: `eval(..)` usage
 To use Python expressions in the Config declarations of temp,ages, the `eval(…)` expression is implemented without keyword restrictions. You can easily add a restricted expression in the `resolve_template()` function.
 
-<br/><br/>
+<br/><br/><hr/>
 
 # **Python Template Transformation Engine**
 
