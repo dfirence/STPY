@@ -1,4 +1,5 @@
 
+
 # **Python Template Engine Tutorial: Yoda’s Classic Example**
 
 This tutorial will walk you through **using the Python Template Engine** to transform structured data. We’ll use **Yoda’s classic example** as our dataset and showcase how you can use loops, conditional logic, and string interpolation to manipulate the data with a template.
@@ -57,7 +58,7 @@ template_yoda = {
 —
 
 ### **Step 3: Apply the Template with the Data**
-We’ll use the `transform()` function to apply the template to our Yoda quotes dataset. 
+We’ll use the `transform()` function to apply the template to our Yoda quotes dataset.
 
 Here’s the complete code:
 
